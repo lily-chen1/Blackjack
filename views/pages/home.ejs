@@ -1,0 +1,52 @@
+<%- include('../partials/header') %>
+<div class="wrapper">
+	<div class="container">
+		<% if(typeof error == 'string' && error){ %>
+			<div class="alert alert-danger" role="alert">
+				<%=error%>
+			</div>
+		<% } %>
+		<% if(typeof loggedin == 'boolean' && loggedin){ %>
+			<h1>You are logged in!</h1>
+			<h1>Welcome <%=username%></h1>
+			<form class="form">
+				<a href="/blackjack">
+				  <button type="button" id="login-button">Play blackjack</button>
+				</a>
+				<a href="/account">
+				  <button type="button" id="login-button">View your account</button>
+				</a>
+			</form>
+		<% } else { %>
+			<h1>Welcome to Undergrad Blackjack!</h1>
+			<h1>Please log in or register</h1>
+			<form class="form">
+				<a href="/login">
+				  <button type="button" id="login-button">Login</button>
+				</a>
+				<a href="/register">
+				  <button type="button" id="login-button">Register</button>
+				</a>
+			</form>
+		<% } %>
+		
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+		<li></li>
+	</ul>
+</div>
+</body>

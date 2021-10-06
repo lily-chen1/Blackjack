@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+    <div class="container">
+        <button type="button" class="btn btn-primary" value="spin" style="float:left;" id='spin'>Test</button>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <h1>test</h1>
+        <div class="drop-targets">
+            <div class="box">
+                <div class="item" id="item" draggable="true">
+                    test
+                </div>
+            </div>
+            <div class="board" id="board"></div>
+            <script>
+                let redTiles = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
+                let element = "";
+                let data = 37;
+                for (let i = 1; i < data; i++) {
+                    let color = "bg-dark";
+                    if (redTiles.includes(i)) {
+                        color = "bg-danger";
+                    }
+                    element += `<div class="box text-light ${color}">${i}</div>`;
+                }
+                document.getElementById("board").innerHTML = element;
+            </script>
+        </div>
+    </div>
+<%- include('../partials/footer') %>

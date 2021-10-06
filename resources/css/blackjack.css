@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+/* (A) SHARED */
+/* (A1) CONTAINERS */
+#deal-wrap,
+#play-wrap {
+  min-height: 120px;
+}
+#deal-data,
+#play-data {
+  padding: 10px;
+  color: #333;
+}
+#deal-stand,
+#play-stand {
+  display: none;
+  padding: 5px;
+  background: #ab2323;
+  color: #fff;
+}
+#deal-stand.stood,
+#play-stand.stood {
+  display: inline-block;
+}
+
+/* (A2) CARDS */
+#deal-cards,
+#play-cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.bj-card {
+  box-sizing: border-box;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eaeaea;
+}
+
+/* (B) DEALER'S CARDS */
+#deal-wrap {
+  background: #a6e9d5;
+}
+#deal-data {
+  background: #4dd4ac;
+}
+#deal-first .front {
+  display: none;
+}
+#deal-first.show .back {
+  display: none;
+}
+#deal-first.show .front {
+  display: block;
+}
+
+/* (C) PLAYER'S CARDS */
+#play-wrap {
+  background: #9eeaf9;
+}
+#play-data {
+  background: #3dd5f3;
+}
+
+/* (D) PLAY CONTROLS */
+#play-control {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+#play-control input {
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+}
+#playc-hit,
+#playc-stand {
+  display: none;
+}
+#play-control.started {
+  grid-template-columns: 50% 50%;
+}
+#play-control.started #playc-start {
+  display: none;
+}
+#play-control.started #playc-hit,
+#play-control.started #playc-stand {
+  display: block;
+}

@@ -1,0 +1,49 @@
+<%- include('../partials/header') %>
+    <div class="container">
+        <div class="card login-card" style="width: 30rem;">
+            <div class="card-body">
+                <main class="form-signin">
+                    <form action="/register/register_user" method="post">
+                        <h1 class="h3 mb-3 fw-normal">Create New Account</h1>
+                        <label for="username" class="visually-hidden">Username</label>
+                        <input type="username" id="username" class="form-control" name="username" placeholder="Username"
+                            required autofocus>
+                        <label for="name" class="visually-hidden">Name</label>
+                        <input type="name" id="name" class="form-control" name="name" placeholder="Name" required
+                            autofocus>
+                        <label for="email" class="visually-hidden">Email address</label>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Email address"
+                            required autofocus>
+                        <label for="password" class="visually-hidden">Password</label>
+                        <input type="password" id="password" class="form-control" name="password" placeholder="Password"
+                            required>
+                        <% if(typeof error == 'string' && error){ %>
+                            <p class="text-danger"><%=error%></p>
+                        <% } %>    
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Create Account</button>
+                    </form>
+                </main>
+                <p class="text-muted">Already have an account?</p>
+                <a href="" class="text-muted">Log in here</p>
+            </div>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    </body>
+
+    </html>

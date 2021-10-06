@@ -1,0 +1,1 @@
+exports.password = "your database password here";

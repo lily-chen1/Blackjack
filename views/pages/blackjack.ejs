@@ -1,0 +1,61 @@
+<%- include('../partials/header') %>
+    <script>
+        var userId = "<%- data[1][0].user_id %>";
+        var userBalance = "<%- data[0][0].balance %>";
+        console.log(userId);
+    </script>
+    <div class="card text-center" style="margin: 2em 4em 4em;">
+        <div class="card-header">
+            User ID: <%- data[1][0].user_id %>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Welcome <%- data[1][0].name %>
+            </h4>
+            <h5 class="card-text">Balance: $<div id="balanceDisplay" style="display: inline;"><%- data[0][0].balance %></div>
+            </h5>
+            <div class="input-group mb-3" style="width: 10em; margin:auto">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="betField">
+                <span class="input-group-text">.00</span>
+            </div>
+            <div class="alert alert-danger" role="alert" id="betError" style="margin:-1em;visibility:hidden;height:0px;">
+                Please input a number!
+            </div>
+            <button class="btn btn-primary" id="betButton">Place bet</button>
+        </div>
+        <div class="card-footer text-muted">
+            Rules: 1 deck of 52 cards, reshuffles at the beginning of each play, dealer soft 17, payout is 3 to 2
+        </div>
+    </div>
+    <div class="alert" role="alert" style="margin: 0px;visibility:hidden;height:0px;" id="resultAlert">
+        <h4 class="alert-heading" id="resultAlertHeading">Sample text</h4>
+        <p id="resultAlertText">Aww yeah, you successfully read this important alert message. This example text is going
+            to run a bit longer
+            so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0" id="resultAlertFooter">Whenever you need to, be sure to use margin utilities to keep things nice
+            and tidy.</p>
+    </div>
+    <div id="deal-wrap">
+        <div id="deal-data">
+            <span id="deal-stand">STAND</span>
+            Dealer's Hand - <span id="deal-points">?</span>
+        </div>
+        <div id="deal-cards"></div>
+    </div>
+    <div id="play-wrap">
+        <div id="play-data">
+            <span id="play-stand">STAND</span>
+            Your Hand - <span id="play-points">0</span>
+        </div>
+        <div id="play-cards"></div>
+    </div>
+    <div id="play-control">
+        <input type="button" class="btn btn-primary" id="playc-start" value="Play!" disabled />
+        <input type="button" class="btn btn-primary" id="playc-hit" value="Hit" />
+        <input type="button" class="btn btn-primary" id="playc-stand" value="Stand" />
+    </div>
+    <script src="../../resources/js/blackjack.js"></script>
+    </body>
+
+    </html>
