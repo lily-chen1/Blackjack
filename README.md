@@ -1,5 +1,8 @@
 # Blackjack
 
+Site is running at:
+https://theocho-015-08.herokuapp.com/
+
 This is a project I made in one of my classes. It is a fully functional blackjack web application that features account creation, loggin in, editing account details, depositing balance, and removing balance when money is lost while playing.
 
 **HOW TO RUN**
